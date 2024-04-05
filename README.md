@@ -25,7 +25,7 @@ Now that you're in the assignment view, you are able to use the provided tools a
 Currently the tool only has functionality to scrape assignments from the webpage and allow you to add assignments and see your score after. I will add functionality to change the scores of assignments and add more assignments in the very near future. Many more features are planned to be added in the near future!
 
 ## Important
-GradeFelon was created to act as a permanent solution for the allowing students to change, add, and view their grades. GradeFelon does not use any API requests to retrieve student information and only does so by scraping the webpage. Student information is secure and only stored on the client side. Passwords and IDs are not stored by GradeFelon.
+GradeFelon was created to act as a permanent solution for allowing students to change, add, and view their grades. GradeFelon does not use any API requests to retrieve student information; instead, it only scrapes the webpage. Student information is secure and only stored on the client side. Passwords and IDs are not stored by GradeFelon.
 
 ---
 
