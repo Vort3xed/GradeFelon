@@ -79,7 +79,7 @@ function handleButtonClick() {
             const grade = parseFloat(gradeText);
             if (!isNaN(grade)) {
                 console.log("Parsed Grade:", grade);
-                grades.push(grade);
+                grades.push(999999);
             }
         }
     });
@@ -124,7 +124,27 @@ function handleButtonClick() {
         }
     }
 
-    const finalGrade = calculateFinalGrade(grades, maxPoints, weights);
+    let santizedGrades = [];
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] !== 999999) {
+            santizedGrades.push(grades[i]);
+        } else {
+            weights[i] = 999999;
+        }
+    }
+
+    let santizedWeights = [];
+    for (let i = 0; i < weights.length; i++) {
+        if (weights[i] !== 999999) {
+            santizedWeights.push(weights[i]);
+        }
+    }
+
+    console.log('Grades:', santizedGrades);
+    console.log('Weights:', santizedWeights);
+    console.log('Max Points:', maxPoints);
+
+    const finalGrade = calculateFinalGrade(santizedGrades, maxPoints, santizedWeights);
 
     console.log('Final Grade:', finalGrade);
 
