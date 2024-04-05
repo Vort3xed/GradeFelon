@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "GradeFelon",
+    "version": "1.0",
+    "description": "Having a grade management system as bad as Synergy should be a felony. Use this extension to calculate your grade, add assignments, and change the scores to assignments.",
+    "author": "Agneya Tharun",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://md-mcps-psv.edupoint.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
